@@ -1,6 +1,8 @@
 Revision history for Perl extension {{$dist->name}}
 
 {{$NEXT}}
+
+1.111500  2011-05-30 14:06:18 Europe/Vienna
     - Add UNITCHECK - and also move BEGIN CHECK INIT END to perlmod as docs are
       clearer there (thanks ranguard)
 
