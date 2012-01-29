@@ -1,9 +1,6 @@
 NAME
     App::perlzonji - A more knowledgeable perldoc
 
-VERSION
-    version 1.120290
-
 SYNOPSIS
         # perlzonji UNIVERSAL::isa
         # (runs `perldoc perlobj`)
@@ -19,6 +16,7 @@ DESCRIPTION
         perlzonji TIEARRAY
         perlzonji INPUT_RECORD_SEPARATOR
         perlzonji '$^F'
+        perlzonji '\Q'
         perlzonji PERL5OPT
         perlzonji :mmap
         perlzonji __WARN__
@@ -26,10 +24,6 @@ DESCRIPTION
         perlzonji head4
 
     For efficiency, "alias pod=perlzonji".
-
-    The word "zonji" means "knowledge of" in Japanese. Another example is
-    the question "gozonji desu ka", meaning "Do you know?" - "go" is a
-    prefix added for politeness.
 
 FUNCTIONS
   run
@@ -54,9 +48,8 @@ OPTIONS
     Getopt::Long.
 
     "--perldoc-command", "-c"
-        Specifies the POD formatter/pager to delegate to. Default is .
-        "perldoc" "annopod" from AnnoCPAN::Perldoc is a better . alternative
-        .
+        Specifies the POD formatter/pager to delegate to. Default is
+        "perldoc" "annopod" from AnnoCPAN::Perldoc is a better alternative.
 
     "--debug"
         Prints the whole command before executing it.
@@ -71,34 +64,21 @@ OPTIONS
     "--man", "-m"
         Prints the manual page and exits.
 
-INSTALLATION
-    See perlmodinstall for information and options on installing Perl
-    modules.
-
-BUGS AND LIMITATIONS
-    No bugs have been reported.
-
-    Please report any bugs or feature requests through the web interface at
-    <http://rt.cpan.org/Public/Dist/Display.html?Name=App-perlzonji>.
-
-AVAILABILITY
-    The latest version of this module is available from the Comprehensive
-    Perl Archive Network (CPAN). Visit <http://www.perl.com/CPAN/> to find a
-    CPAN site near you, or see <http://search.cpan.org/dist/App-perlzonji/>.
-
-    The development version lives at
-    <http://github.com/hanekomu/App-perlzonji> and may be cloned from
-    <git://github.com/hanekomu/App-perlzonji.git>. Instead of sending
-    patches, please fork this project using the standard git and github
-    infrastructure.
-
 AUTHORS
-    *   Marcel Gruenauer <marcel@cpan.org>
+    The following persons are the authors of all the files provided in this
+    distribution unless explicitly noted otherwise.
 
-    *   Leo Lapworth <LLAP@cuckoo.org>
+    Marcel Gruenauer <marcel@cpan.org>, <http://perlservices.at>
+
+    Lars Dieckow <daxim@cpan.org>
+
+    Leo Lapworth <LLAP@cuckoo.org>
 
 COPYRIGHT AND LICENSE
-    This software is copyright (c) 2010 by Marcel Gruenauer.
+    The following copyright notice applies to all the files provided in this
+    distribution, including binary files, unless explicitly noted otherwise.
+
+    This software is copyright (c) 2011 by Marcel Gruenauer.
 
     This is free software; you can redistribute it and/or modify it under
     the same terms as the Perl 5 programming language system itself.
