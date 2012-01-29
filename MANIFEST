@@ -1,6 +1,5 @@
 bin/perlzonji
 Changes
-dist.ini
 lib/App/perlzonji.pm
 lib/App/perlzonji/Plugin/FoundIn.pm
 lib/App/perlzonji/Plugin/Label.pm

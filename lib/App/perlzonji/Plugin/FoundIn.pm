@@ -12,7 +12,7 @@ use App::perlzonji;
 our %found_in = (
     perlop => [
         qw(lt gt le ge eq ne cmp not and or xor s m tr y
-          q qq qr qx qw)
+          q qq qr qx qw \l \u \L \U \Q \E)
     ],
     perlsyn => [qw(if else elsif unless while until for foreach)],
     perlobj => [qw(isa ISA can VERSION)],

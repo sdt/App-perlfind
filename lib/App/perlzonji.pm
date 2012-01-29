@@ -89,6 +89,7 @@ C<perlzonji> is like C<perldoc> except it knows about more things. Try these:
     perlzonji TIEARRAY
     perlzonji INPUT_RECORD_SEPARATOR
     perlzonji '$^F'
+    perlzonji '\Q'
     perlzonji PERL5OPT
     perlzonji :mmap
     perlzonji __WARN__
@@ -129,9 +130,9 @@ abbreviations">.
 
 =item C<--perldoc-command>, C<-c>
 
-Specifies the POD formatter/pager to delegate to. Default is         .
-C<perldoc> C<annopod> from L<AnnoCPAN::Perldoc> is a better          .
-alternative                                                          .
+Specifies the POD formatter/pager to delegate to. Default is
+C<perldoc> C<annopod> from L<AnnoCPAN::Perldoc> is a better
+alternative.
 
 =item C<--debug>
 

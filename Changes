@@ -1,6 +1,9 @@
 Revision history for Perl extension App-perlzonji
 
-1.120290  2012-01-29 17:36:14 Europe/Vienna
+1.20  2012-01-29 17:36:14 Europe/Vienna
+    - converted to Makefile.PL style
+    - added special casing and quoting escape sequences found in
+      perlop (\Q, \E etc.)
 
 1.111500  2011-05-30 14:06:18 Europe/Vienna
     - Add UNITCHECK - and also move BEGIN CHECK INIT END to perlmod as docs are
