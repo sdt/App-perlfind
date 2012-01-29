@@ -1,10 +1,7 @@
+package App::perlzonji::Plugin::UseModule;
 use 5.008;
 use strict;
 use warnings;
-
-package App::perlzonji::Plugin::UseModule;
-
-# ABSTRACT: Plugin to try the search word as a module name
 use App::perlzonji;
 App::perlzonji->add_trigger(
     'matches.add' => sub {
@@ -24,7 +21,13 @@ App::perlzonji->add_trigger(
     }
 );
 1;
-1;
+__END__
+
+=pod
+
+=head1 NAME
+
+App::perlzonji::Plugin::UseModule - Plugin to try the search word as a module name
 
 =head1 SYNOPSIS
 

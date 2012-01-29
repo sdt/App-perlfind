@@ -1,10 +1,7 @@
+package App::perlzonji::Plugin::Label;
 use 5.008;
 use strict;
 use warnings;
-
-package App::perlzonji::Plugin::Label;
-
-# ABSTRACT: Plugin for labels
 use App::perlzonji;
 App::perlzonji->add_trigger(
     'matches.add' => sub {
@@ -16,6 +13,13 @@ App::perlzonji->add_trigger(
     }
 );
 1;
+__END__
+
+=pod
+
+=head1 NAME
+
+App::perlzonji::Plugin::Label - Plugin for labels
 
 =head1 SYNOPSIS
 
@@ -26,3 +30,4 @@ App::perlzonji->add_trigger(
 
 This plugin for L<App::perlzonji> checks whether the search term looks like a
 label and if so, adds C<perlsyn> to the match results.
+

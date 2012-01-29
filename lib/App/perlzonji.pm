@@ -1,15 +1,15 @@
+package App::perlzonji;
 use 5.008;
 use strict;
 use warnings;
 
-package App::perlzonji;
-
-# ABSTRACT: A more knowledgeable perldoc
 use Getopt::Long;
 use Pod::Usage;
 use Class::Trigger;
 use Module::Pluggable require => 1;
 __PACKAGE__->plugins;    # 'require' them
+
+our $VERSION = '1.20';
 
 sub run {
     our %opt = ('perldoc-command' => 'perldoc');
@@ -66,11 +66,12 @@ sub execute {
 }
 1;
 
-=begin :prelude
+__END__
+=pod
 
-=for stopwords Dieckow gozonji desu ka
+=head1 NAME
 
-=end :prelude
+App::perlzonji - A more knowledgeable perldoc
 
 =head1 SYNOPSIS
 
@@ -96,9 +97,28 @@ C<perlzonji> is like C<perldoc> except it knows about more things. Try these:
 
 For efficiency, C<alias pod=perlzonji>.
 
-The word C<zonji> means "knowledge of" in Japanese. Another example
-is the question "gozonji desu ka", meaning "Do you know?" - "go" is a
-prefix added for politeness.
+=head1 FUNCTIONS
+
+=head2 run
+
+The main function, which is called by the C<perlzonji> program.
+
+=head2 try_module
+
+Takes as argument the name of a module, tries to load that module and
+executes the formatter, giving that module as an argument. If loading
+the module fails, this subroutine does nothing.
+
+=head2 execute
+
+Executes the given command using C<exec()>. In debug mode, it also
+prints the command before executing it.
+
+=head2 find_matches
+
+Takes a word and returns the matches for that word. It's in a separate
+function to separate logic from presentation so other programs can use
+this module as well.
 
 =head1 OPTIONS
 
@@ -132,23 +152,22 @@ Prints the manual page and exits.
 
 =back
 
-=function run
+=head1 AUTHOR
 
-The main function, which is called by the C<perlzonji> program.
+The following persons are the authors of all the files provided in
+this distribution unless explicitly noted otherwise.
 
-=function try_module
+Marcel Gruenauer <marcel@cpan.org>, L<http://perlservices.at>
 
-Takes as argument the name of a module, tries to load that module and
-executes the formatter, giving that module as an argument. If loading
-the module fails, this subroutine does nothing.
+Leo Lapworth <LLAP@cuckoo.org>
 
-=function execute
+=head1 COPYRIGHT AND LICENSE
 
-Executes the given command using C<exec()>. In debug mode, it also
-prints the command before executing it.
+The following copyright notice applies to all the files provided in
+this distribution, including binary files, unless explicitly noted
+otherwise.
 
-=function find_matches
+This software is copyright (c) 2011 by Marcel Gruenauer.
 
-Takes a word and returns the matches for that word. It's in a separate
-function to separate logic from presentation so other programs can use
-this module as well.
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.

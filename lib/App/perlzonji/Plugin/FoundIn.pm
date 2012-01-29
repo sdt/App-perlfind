@@ -1,10 +1,7 @@
+package App::perlzonji::Plugin::FoundIn;
 use 5.008;
 use strict;
 use warnings;
-
-package App::perlzonji::Plugin::FoundIn;
-
-# ABSTRACT: Plugin to find documentation for syntax and concepts
 use App::perlzonji;
 
 # Specify like this because it's easier. We compute the reverse later (i.e.,
@@ -108,6 +105,13 @@ App::perlzonji->add_trigger(
     }
 );
 1;
+__END__
+
+=pod
+
+=head1 NAME
+
+App::perlzonji::Plugin::FoundIn - Plugin to find documentation for syntax and concepts
 
 =head1 SYNOPSIS
 
