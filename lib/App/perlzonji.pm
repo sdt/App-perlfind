@@ -153,12 +153,14 @@ Prints the manual page and exits.
 
 =back
 
-=head1 AUTHOR
+=head1 AUTHORS
 
 The following persons are the authors of all the files provided in
 this distribution unless explicitly noted otherwise.
 
 Marcel Gruenauer <marcel@cpan.org>, L<http://perlservices.at>
+
+Lars Dieckow <daxim@cpan.org>
 
 Leo Lapworth <LLAP@cuckoo.org>
 

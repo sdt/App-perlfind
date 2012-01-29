@@ -3,9 +3,8 @@ use warnings;
 use ExtUtils::MakeMaker 6.30;
 my $from = 'lib/App/perlzonji.pm';
 WriteMakefile(
-    ABSTRACT_FROM => $from,
-    "AUTHOR" =>
-      'Marcel Gruenauer <marcel@cpan.org>, Leo Lapworth <LLAP@cuckoo.org>',
+    ABSTRACT_FROM    => $from,
+    "AUTHOR"         => 'Marcel Gruenauer <marcel@cpan.org>',
     "BUILD_REQUIRES" => {
         'Capture::Tiny' => 0,
         'Carp'          => 0,
