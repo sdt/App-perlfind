@@ -3,6 +3,7 @@ use 5.008;
 use strict;
 use warnings;
 use App::perlzonji;
+our $VERSION = '2.00';
 App::perlzonji->add_trigger(
     'matches.add' => sub {
         my ($class, $word, $matches) = @_;

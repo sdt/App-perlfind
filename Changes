@@ -1,5 +1,8 @@
 Revision history for Perl extension App-perlzonji
 
+2.00  2012-01-29 21:24:15 Europe/Vienna
+    - bump version number to keep indexer happy
+
 1.20  2012-01-29 17:36:14 Europe/Vienna
     - converted to Makefile.PL style
     - added special casing and quoting escape sequences found in

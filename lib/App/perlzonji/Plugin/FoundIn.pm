@@ -3,6 +3,7 @@ use 5.008;
 use strict;
 use warnings;
 use App::perlzonji;
+our $VERSION = '2.00';
 
 # Specify like this because it's easier. We compute the reverse later (i.e.,
 # it should be easier on the hacker than on the computer).

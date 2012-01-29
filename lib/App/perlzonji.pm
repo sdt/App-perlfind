@@ -2,14 +2,12 @@ package App::perlzonji;
 use 5.008;
 use strict;
 use warnings;
-
 use Getopt::Long;
 use Pod::Usage;
 use Class::Trigger;
 use Module::Pluggable require => 1;
 __PACKAGE__->plugins;    # 'require' them
-
-our $VERSION = '1.20';
+our $VERSION = '2.00';
 
 sub run {
     our %opt = ('perldoc-command' => 'perldoc');
@@ -65,8 +63,8 @@ sub execute {
     }
 }
 1;
-
 __END__
+
 =pod
 
 =head1 NAME
