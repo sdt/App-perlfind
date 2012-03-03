@@ -7,13 +7,13 @@ use Pod::Usage;
 use Class::Trigger;
 use Module::Pluggable require => 1;
 __PACKAGE__->plugins;    # 'require' them
-our $VERSION = '2.01';
+our $VERSION = '2.02';
 
 sub run {
     our %opt = ('perldoc-command' => 'perldoc');
     GetOptions(\%opt, qw(help|h|? man|m perldoc-command|c:s debug dry-run|n))
       or pod2usage(2);
-    if ($opt{help}) {
+    if ($opt{help} || !@ARGV) {
         pod2usage(
             -exitstatus => 0,
             -input      => __FILE__,

@@ -1,5 +1,8 @@
 Revision history for Perl extension App-perlfind
 
+2.02  2012-03-03 17:02:54 Europe/Vienna
+    - show --help if no search term is given
+
 2.01  2012-03-03 16:17:22 Europe/Vienna
     - renamed to "perlfind" after discussion with perl hackers; added a
       deprecation notice to bin/perlzonji
