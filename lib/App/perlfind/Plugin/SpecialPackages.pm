@@ -1,10 +1,10 @@
-package App::perlzonji::Plugin::SpecialPackages;
+package App::perlfind::Plugin::SpecialPackages;
 use 5.008;
 use strict;
 use warnings;
-use App::perlzonji;
-our $VERSION = '2.00';
-App::perlzonji->add_trigger(
+use App::perlfind;
+our $VERSION = '2.01';
+App::perlfind->add_trigger(
     'matches.add' => sub {
         my ($class, $word, $matches) = @_;
         $word =~ /^UNIVERSAL::/ && push @$matches, 'perlobj';
@@ -18,15 +18,15 @@ __END__
 
 =head1 NAME
 
-App::perlzonji::Plugin::SpecialPackages - Plugin to find documentation for special Perl packages
+App::perlfind::Plugin::SpecialPackages - Plugin to find documentation for special Perl packages
 
 =head1 SYNOPSIS
 
-    # perlzonji UNIVERSAL::isa
+    # perlfind UNIVERSAL::isa
     # (runs `perldoc perlobj`)
 
 =head1 DESCRIPTION
 
-This plugin for L<App::perlzonji> knows where special Perl packages like
+This plugin for L<App::perlfind> knows where special Perl packages like
 C<UNIVERSAL::> and C<CORE::> are documented.
 

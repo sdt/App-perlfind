@@ -3,5 +3,4 @@
 use warnings;
 use strict;
 use App::perlfind;
-print STDERR qq!Use of "perlzonji" is deprecated. Please use "perlfind".\n!;
 App::perlfind->run;

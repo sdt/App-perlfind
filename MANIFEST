@@ -1,10 +1,11 @@
+bin/perlfind
 bin/perlzonji
 Changes
-lib/App/perlzonji.pm
-lib/App/perlzonji/Plugin/FoundIn.pm
-lib/App/perlzonji/Plugin/Label.pm
-lib/App/perlzonji/Plugin/SpecialPackages.pm
-lib/App/perlzonji/Plugin/UseModule.pm
+lib/App/perlfind.pm
+lib/App/perlfind/Plugin/FoundIn.pm
+lib/App/perlfind/Plugin/Label.pm
+lib/App/perlfind/Plugin/SpecialPackages.pm
+lib/App/perlfind/Plugin/UseModule.pm
 Makefile.PL
 MANIFEST			This list of files
 MANIFEST.SKIP

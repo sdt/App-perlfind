@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 use ExtUtils::MakeMaker 6.30;
-my $from = 'lib/App/perlzonji.pm';
+my $from = 'lib/App/perlfind.pm';
 WriteMakefile(
     ABSTRACT_FROM    => $from,
     "AUTHOR"         => 'Marcel Gruenauer <marcel@cpan.org>',
@@ -16,8 +16,8 @@ WriteMakefile(
     },
     CONFIGURE_REQUIRES => { 'ExtUtils::MakeMaker' => '6.58' },
     LICENSE            => 'perl',
-    NAME               => 'App-perlzonji',
-    EXE_FILES          => ["bin/perlzonji"],
+    NAME               => 'App-perlfind',
+    EXE_FILES          => [qw(bin/perlfind bin/perlzonji)],
     PREREQ_PM          => {
         'Class::Trigger'    => '0',
         'Getopt::Long'      => '0',

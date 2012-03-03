@@ -1,4 +1,4 @@
-package App::perlzonji;
+package App::perlfind;
 use 5.008;
 use strict;
 use warnings;
@@ -7,7 +7,7 @@ use Pod::Usage;
 use Class::Trigger;
 use Module::Pluggable require => 1;
 __PACKAGE__->plugins;    # 'require' them
-our $VERSION = '2.00';
+our $VERSION = '2.01';
 
 sub run {
     our %opt = ('perldoc-command' => 'perldoc');
@@ -69,38 +69,39 @@ __END__
 
 =head1 NAME
 
-App::perlzonji - A more knowledgeable perldoc
+App::perlfind - A more knowledgeable perldoc
 
 =head1 SYNOPSIS
 
-    # perlzonji UNIVERSAL::isa
+    # perlfind UNIVERSAL::isa
     # (runs `perldoc perlobj`)
 
 =head1 DESCRIPTION
 
-C<perlzonji> is like C<perldoc> except it knows about more things. Try these:
+C<perlfind> is like C<perldoc> except it knows about more things. Try these:
 
-    perlzonji xor
-    perlzonji foreach
-    perlzonji isa
-    perlzonji AUTOLOAD
-    perlzonji TIEARRAY
-    perlzonji INPUT_RECORD_SEPARATOR
-    perlzonji '$^F'
-    perlzonji '\Q'
-    perlzonji PERL5OPT
-    perlzonji :mmap
-    perlzonji __WARN__
-    perlzonji __PACKAGE__
-    perlzonji head4
+    perlfind xor
+    perlfind foreach
+    perlfind isa
+    perlfind AUTOLOAD
+    perlfind TIEARRAY
+    perlfind INPUT_RECORD_SEPARATOR
+    perlfind '$^F'
+    perlfind '\Q'
+    perlfind PERL5OPT
+    perlfind :mmap
+    perlfind __WARN__
+    perlfind __PACKAGE__
+    perlfind head4
+    perlfind UNITCHECK
 
-For efficiency, C<alias pod=perlzonji>.
+For efficiency, C<alias pod=perlfind>.
 
 =head1 FUNCTIONS
 
 =head2 run
 
-The main function, which is called by the C<perlzonji> program.
+The main function, which is called by the C<perlfind> program.
 
 =head2 try_module
 

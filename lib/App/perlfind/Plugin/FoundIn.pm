@@ -1,9 +1,9 @@
-package App::perlzonji::Plugin::FoundIn;
+package App::perlfind::Plugin::FoundIn;
 use 5.008;
 use strict;
 use warnings;
-use App::perlzonji;
-our $VERSION = '2.00';
+use App::perlfind;
+our $VERSION = '2.01';
 
 # Specify like this because it's easier. We compute the reverse later (i.e.,
 # it should be easier on the hacker than on the computer).
@@ -95,7 +95,7 @@ our %found_in = (
     'PerlIO' =>
       [qw(:bytes :crlf :mmap :perlio :pop :raw :stdio :unix :utf8 :win32)],
 );
-App::perlzonji->add_trigger(
+App::perlfind->add_trigger(
     'matches.add' => sub {
         my ($class, $word, $matches) = @_;
         while (my ($file, $words) = each our %found_in) {
@@ -112,16 +112,16 @@ __END__
 
 =head1 NAME
 
-App::perlzonji::Plugin::FoundIn - Plugin to find documentation for syntax and concepts
+App::perlfind::Plugin::FoundIn - Plugin to find documentation for syntax and concepts
 
 =head1 SYNOPSIS
 
-    # perlzonji elsif
+    # perlfind elsif
     # (runs `perldoc perlsyn`)
 
 =head1 DESCRIPTION
 
-This plugin for L<App::perlzonji> knows where to find documentation for syntax
+This plugin for L<App::perlfind> knows where to find documentation for syntax
 and built-in Perl concepts. It knows about things like
 
     elsif

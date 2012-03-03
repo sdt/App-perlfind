@@ -1,4 +1,8 @@
-Revision history for Perl extension App-perlzonji
+Revision history for Perl extension App-perlfind
+
+2.01  2012-03-03 16:17:22 Europe/Vienna
+    - renamed to "perlfind" after discussion with perl hackers; added a
+      deprecation notice to bin/perlzonji
 
 2.00  2012-01-29 21:24:15 Europe/Vienna
     - bump version number to keep indexer happy

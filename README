@@ -1,33 +1,33 @@
 NAME
-    App::perlzonji - A more knowledgeable perldoc
+    App::perlfind - A more knowledgeable perldoc
 
 SYNOPSIS
-        # perlzonji UNIVERSAL::isa
+        # perlfind UNIVERSAL::isa
         # (runs `perldoc perlobj`)
 
 DESCRIPTION
-    "perlzonji" is like "perldoc" except it knows about more things. Try
+    "perlfind" is like "perldoc" except it knows about more things. Try
     these:
 
-        perlzonji xor
-        perlzonji foreach
-        perlzonji isa
-        perlzonji AUTOLOAD
-        perlzonji TIEARRAY
-        perlzonji INPUT_RECORD_SEPARATOR
-        perlzonji '$^F'
-        perlzonji '\Q'
-        perlzonji PERL5OPT
-        perlzonji :mmap
-        perlzonji __WARN__
-        perlzonji __PACKAGE__
-        perlzonji head4
+        perlfind xor
+        perlfind foreach
+        perlfind isa
+        perlfind AUTOLOAD
+        perlfind TIEARRAY
+        perlfind INPUT_RECORD_SEPARATOR
+        perlfind '$^F'
+        perlfind '\Q'
+        perlfind PERL5OPT
+        perlfind :mmap
+        perlfind __WARN__
+        perlfind __PACKAGE__
+        perlfind head4
 
-    For efficiency, "alias pod=perlzonji".
+    For efficiency, "alias pod=perlfind".
 
 FUNCTIONS
   run
-    The main function, which is called by the "perlzonji" program.
+    The main function, which is called by the "perlfind" program.
 
   try_module
     Takes as argument the name of a module, tries to load that module and

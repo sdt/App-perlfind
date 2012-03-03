@@ -1,10 +1,10 @@
-package App::perlzonji::Plugin::Label;
+package App::perlfind::Plugin::Label;
 use 5.008;
 use strict;
 use warnings;
-use App::perlzonji;
-our $VERSION = '2.00';
-App::perlzonji->add_trigger(
+use App::perlfind;
+our $VERSION = '2.01';
+App::perlfind->add_trigger(
     'matches.add' => sub {
         my ($class, $word, $matches) = @_;
 
@@ -20,15 +20,15 @@ __END__
 
 =head1 NAME
 
-App::perlzonji::Plugin::Label - Plugin for labels
+App::perlfind::Plugin::Label - Plugin for labels
 
 =head1 SYNOPSIS
 
-    # perlzonji FOO:
+    # perlfind FOO:
     # (runs `perldoc perlsyn`)
 
 =head1 DESCRIPTION
 
-This plugin for L<App::perlzonji> checks whether the search term looks like a
+This plugin for L<App::perlfind> checks whether the search term looks like a
 label and if so, adds C<perlsyn> to the match results.
 
