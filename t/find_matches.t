@@ -24,7 +24,7 @@ done_testing;
 
 sub test_find_matches {
     my ($args, $expect, $name) = @_;
-    my $found = App::perlfind::find_matches($args);
-    is($expect, $found->[0], "find_matches() - $args ok");
-    fail("Too many results") if scalar(@$found) != 1;
+    my @found = App::perlfind::find_matches($args);
+    is($expect, $found[0], "find_matches() - $args ok");
+    fail("Not exactly one result") if scalar(@found) != 1;
 }

@@ -1,6 +1,18 @@
 #!/usr/bin/env perl
-# ABSTRACT: A more knowledgeable perldoc
-use warnings;
 use strict;
+use warnings;
 use App::perlfind;
-App::perlfind->run;
+exit( App::perlfind->run );
+
+__END__
+
+=head1 NAME
+
+perlfind
+
+=head1 DESCRIPTION
+
+See L<App::perlfind>, L<Pod::Cpandoc> and L<Pod::Perldoc>.
+
+=cut
+

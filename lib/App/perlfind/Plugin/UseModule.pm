@@ -3,7 +3,7 @@ use 5.008;
 use strict;
 use warnings;
 use App::perlfind;
-our $VERSION = '2.02';
+our $VERSION = '2.03';
 App::perlfind->add_trigger(
     'matches.add' => sub {
         my ($class, $word, $matches) = @_;

@@ -1,5 +1,10 @@
 Revision history for Perl extension App-perlfind
 
+2.03  2012-03-04 10:34:21 Europe/Vienna
+    - complete rewrite; perlfind now based on Pod::Cpandoc and this
+      Pod::Perldoc and inherits all of their features. Especially command-line
+      switches work like for perldoc.
+
 2.02  2012-03-03 17:02:54 Europe/Vienna
     - show --help if no search term is given
 
