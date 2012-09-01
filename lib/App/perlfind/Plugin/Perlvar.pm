@@ -264,15 +264,16 @@ __END__
 
 =head1 NAME
 
-App::perlfind::Plugin::Perlvar - Plugin to find documentation for syntax and concepts
+App::perlfind::Plugin::Perlvar - Plugin to find documentation for predefined variables
 
 =head1 SYNOPSIS
 
+    # all of the following run "perldoc -v %SIG":
     # perlfind %SIG
-    # (runs `perldoc -v %SIG`)
-
     # perlfind SIG
-    # (the same)
+    # perlfind QUIT
+    # perlfind __WARN__
+    # perlfind WARN
 
 =head1 DESCRIPTION
 
@@ -284,3 +285,4 @@ predefined variables and signals. It knows about things like
     __WARN__
     WARN
     QUIT
+
