@@ -1,5 +1,21 @@
 Revision history for Perl extension App-perlfind
 
+2.04  2012-09-01 12:32:15 Europe/Vienna
+    - built-in functions can again be found without '-f' (thanks Steven
+      Haryanto for the bug report)
+    - added heuristic for when the search term contains '::': assume it's a
+      module if the final symbol starts with an uppercase character, assume
+      it's a fully-qualified function otherwise (thanks RWSTAUNER for the bug
+      report)
+    - __FILE__, __LINE__ and __PACKAGE__ are found in perlfunc, but __DATA__
+      and __END__ are found in perldata
+    - __DIE__ and __WARN__ are found in perlvar under '%SIG'
+    - can find file test functions like -r, -w, -x etc.
+    - searching for predefined variables now works with and without the sigil
+      as long as the variable is either a number, the topicalizer or has at
+      least two word characters. So 'INPUT_RECORD_SEPARATOR',
+      '$INPUT_RECORD_SEPARATOR', 'RS', '$RS' and '$/' all find the same thing.
+
 2.03  2012-03-04 10:34:21 Europe/Vienna
     - complete rewrite; perlfind now based on Pod::Cpandoc and this
       Pod::Perldoc and inherits all of their features. Especially command-line

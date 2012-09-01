@@ -11,9 +11,11 @@ WriteMakefile(
     NAME               => 'App-perlfind',
     EXE_FILES          => [qw(bin/perlfind bin/perlzonji)],
     PREREQ_PM          => {
-        'Pod::Cpandoc'      => '0',
         'Class::Trigger'    => '0',
         'Module::Pluggable' => '0',
+        'Pod::Cpandoc'      => '0',
+        'Pod::Functions'    => '0',
+        'Test::Differences' => '0',
         'parent'            => '0',
     },
     VERSION_FROM => $from,

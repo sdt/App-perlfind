@@ -3,12 +3,12 @@ use 5.008;
 use strict;
 use warnings;
 use App::perlfind;
-our $VERSION = '2.03';
+our $VERSION = '2.04';
 App::perlfind->add_trigger(
     'matches.add' => sub {
         my ($class, $word, $matches) = @_;
-        $word =~ /^UNIVERSAL::/ && push @$matches, 'perlobj';
-        $word =~ /^CORE::/      && push @$matches, 'perlsub';
+        $$word =~ /^UNIVERSAL::/ && push @$matches, 'perlobj';
+        $$word =~ /^CORE::/      && push @$matches, 'perlsub';
     }
 );
 1;

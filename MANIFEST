@@ -3,7 +3,9 @@ bin/perlzonji
 Changes
 lib/App/perlfind.pm
 lib/App/perlfind/Plugin/FoundIn.pm
+lib/App/perlfind/Plugin/Functions.pm
 lib/App/perlfind/Plugin/Label.pm
+lib/App/perlfind/Plugin/Perlvar.pm
 lib/App/perlfind/Plugin/SpecialPackages.pm
 lib/App/perlfind/Plugin/UseModule.pm
 lib/App/perlzonji.pm
@@ -15,6 +17,7 @@ t/00-compile.t
 t/000-report-versions.t
 t/dedup.t
 t/find_matches.t
+util/perlvar-extract.pl
 xt/critic.t
 xt/eol.t
 xt/no-tabs.t

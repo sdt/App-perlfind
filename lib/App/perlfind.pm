@@ -6,14 +6,14 @@ use Class::Trigger;
 use Module::Pluggable require => 1;
 __PACKAGE__->plugins;    # 'require' them
 use parent qw(Pod::Cpandoc);
-our $VERSION = '2.03';
+our $VERSION = '2.04';
 
 # separate function so it's testable
 sub find_matches {
     my $word = shift;
     my @matches;
-    __PACKAGE__->call_trigger('matches.add', $word, \@matches);
-    return @matches;
+    __PACKAGE__->call_trigger('matches.add', \$word, \@matches);
+    return ($word, @matches);
 }
 
 sub grand_search_init {
@@ -22,7 +22,8 @@ sub grand_search_init {
     for my $page (@$pages) {
 
         # $page is a search term, see Pod::Perldoc
-        my @matches = find_matches($page);
+        my @matches;
+        ($page, @matches) = find_matches($page);
 
         # If perlfunc or perlvar are indicated, set options as though
         # -f or -v were given, respectively, so Pod::Perldoc will only

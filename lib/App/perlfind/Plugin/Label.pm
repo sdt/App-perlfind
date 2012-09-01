@@ -3,14 +3,14 @@ use 5.008;
 use strict;
 use warnings;
 use App::perlfind;
-our $VERSION = '2.03';
+our $VERSION = '2.04';
 App::perlfind->add_trigger(
     'matches.add' => sub {
         my ($class, $word, $matches) = @_;
 
      # Is it a label (ends with ':')? Do this after %found_in, because there are
      # special labels such as 'SKIP:' and 'TODO:' that map to Test::More
-        if ($word =~ /^\w+:$/) { push @$matches, 'perlsyn' }
+        if ($$word =~ /^\w+:$/) { push @$matches, 'perlsyn' }
     }
 );
 1;
