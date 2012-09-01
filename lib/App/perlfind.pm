@@ -6,7 +6,7 @@ use Class::Trigger;
 use Module::Pluggable require => 1;
 __PACKAGE__->plugins;    # 'require' them
 use parent qw(Pod::Cpandoc);
-our $VERSION = '2.04';
+our $VERSION = '2.05';
 
 # separate function so it's testable
 sub find_matches {

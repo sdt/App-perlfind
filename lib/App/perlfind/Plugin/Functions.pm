@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use App::perlfind;
 use Pod::Functions;
-our $VERSION = '2.04';
+our $VERSION = '2.05';
 
 # Use a look-up hash, so duplicates that appear more than once in
 # %Kinds are deduped; also add cleaned versions of functions found in

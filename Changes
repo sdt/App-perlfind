@@ -1,5 +1,10 @@
 Revision history for Perl extension App-perlfind
 
+2.05  2012-09-01 19:39:33 Europe/Vienna
+    - fixed App::perlfind::Plugin::Perlvar docs
+    - UseModule plugin: don't try to use() it if it doesn't look like a package
+      name
+
 2.04  2012-09-01 12:32:15 Europe/Vienna
     - built-in functions can again be found without '-f' (thanks Steven
       Haryanto for the bug report)

@@ -2,7 +2,7 @@ package App::perlzonji;
 use 5.008;
 use strict;
 use warnings;
-our $VERSION = '2.04';
+our $VERSION = '2.05';
 1;
 
 # This package just exists so users who already have App::perlzonji

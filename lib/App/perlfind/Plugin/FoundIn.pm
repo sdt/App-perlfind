@@ -3,7 +3,7 @@ use 5.008;
 use strict;
 use warnings;
 use App::perlfind;
-our $VERSION = '2.04';
+our $VERSION = '2.05';
 
 # Specify like this because it's easier. We compute the reverse later (i.e.,
 # it should be easier on the hacker than on the computer).
