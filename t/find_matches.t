@@ -31,6 +31,7 @@ my %expect = (
     '-X'     => [ '-X'     => qw(perlfunc perlop) ],
     '-w'     => [ '-X'     => qw(perlfunc perlop) ],
     '_'      => [ '$_'     => qw(perlvar) ],
+    'lib/App/perlfind.pm' => [ 'lib/App/perlfind.pm' ],
 );
 for my $query (sort keys %expect) {
     test_find_matches($query, $expect{$query});
@@ -42,5 +43,6 @@ sub test_find_matches {
     my ($word,           @pages)          = App::perlfind::find_matches($query);
     my ($expected_query, @expected_pages) = @$expect;
     is($word, $expected_query, "find_matches($query) searches for [$word]...");
-    eq_or_diff(\@pages, \@expected_pages, "... in @expected_pages");
+    my $test_name = @expected_pages ? "in @expected_pages" : 'without finding pages';
+    eq_or_diff(\@pages, \@expected_pages, "... $test_name");
 }
