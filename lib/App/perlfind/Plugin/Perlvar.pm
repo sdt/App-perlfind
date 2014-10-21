@@ -245,7 +245,7 @@ my %is_var = (
           );
 
 # find __WARN__, WARN, INT etc. as %SIG.
-$is_var{$_} = '%SIG' for qw(WARN DIE), keys %SIG;
+$is_var{$_} = '%SIG' for qw(WARN __WARN__ DIE __DIE__), keys %SIG;
 
 App::perlfind->add_trigger(
     'matches.add' => sub {
