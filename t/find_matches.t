@@ -33,8 +33,17 @@ my %expect = (
     '_'      => [ '$_'     => qw(perlvar) ],
     'lib/App/perlfind.pm' => [ 'lib/App/perlfind.pm' ],
 );
+my %min_version = (
+    # Some symbols are not defined in all perl versions
+    '__PACKAGE__' => 5.016,
+);
 for my $query (sort keys %expect) {
-    test_find_matches($query, $expect{$query});
+SKIP: {
+        my $req = $min_version{$query};
+        skip "find_matches($query) requires perl $min_version{$query}", 1
+            if $req && $] < $req;
+        test_find_matches($query, $expect{$query});
+    }
 }
 done_testing;
 
